@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+* html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #F0F2F5;
+  overflow: auto;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+}
+
+/***
+ナビゲーションバー 
+***/
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4px 20px;
+  background-color: #FFFFFF;
+  color: #333;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 20px;
+}
+
+nav .logo h2 {
+  font-size: 32px;
+  color: #4A90E2;
+  font-weight: 700;
+}
+
+nav .navLinks {
+  display: flex;
+  list-style: none;
+}
+
+nav .navLinks li {
+  margin-right: 30px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+nav .navLinks li:hover {
+  color: #4A90E2;
+}
+
+nav button {
+  padding: 8px 17px;
+  background-color: #4A90E2;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+nav button:hover {
+  background-color: #357ABD;
+}
+
+/***
+メイン画面 
+***/
+.mainContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 178px;
+}
+
+.cryptContainer h1 {
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin-bottom: 28px;
+  margin-top: -16px;
+  color: #333;
+}
+
+.cryptContainer button {
+  padding: 2px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: #4A90E2;
+  transition: background-color 0.3s;
+}
+
+.cryptContainer button:hover {
+  background-color: #357ABD;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  background-color: #342356;
+  backdrop-filter: blur(1px);
+  padding: 0px 30px;
+  width: 400px;
+  height: 330px;
+  border-radius: 10px;
+  margin-left: -100px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 191, 255, 0.075);
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+  border: 2px rgba(255, 255, 255, 0.4) solid;
+  border-bottom: 2px rgba(40, 40, 40, 0.35) solid;
+  border-right: 2px rgba(40, 40, 40, 0.35) solid;
+}
+
+.inputContainer input {
+  padding: 10px 15px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px #D0D3D8 solid;
+  background-color: #F0F2F5;
+  color: #333;
+}
+
+.inputContainer button {
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+  padding: 7px;
+  font-size: 16px;
+  background-color: #4A90E2;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: -10px;
+  color: white;
+}
+
+
+.inputContainer button:hover {
+  background-color: #357ABD;
+}
