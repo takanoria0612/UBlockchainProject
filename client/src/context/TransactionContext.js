@@ -26,6 +26,7 @@ export const TransactionProvider = ({ children }) => {
         amount: "",
     });
     const [isLoading, setIsLoading] = useState(false);
+    const [errorMessage, setErrorMessage] = useState(null);
     const handleChange = (e, name) => {
         setInputFormData((prevInputFormData) => ({  
             ...prevInputFormData,
@@ -166,8 +167,10 @@ const sendTransaction = async () => {
       // throw new Error("イーサリアムオブジェクトがありません。");
       if (err.code === 4001) {
         console.log("トランザクションが拒否されました。");
+        setErrorMessage("トランザクションが拒否されました。");
       } else {
         console.error("トランザクションエラー:", err);
+        setErrorMessage("トランザクションエラー");
       }
     }
 
@@ -176,7 +179,7 @@ const sendTransaction = async () => {
         checkMetamaskWalletConnected();
     }, []);
     return (
-        <TransactionContext.Provider value={{ connectWallet, sendTransaction, handleChange, inputFormData}}>
+        <TransactionContext.Provider value={{ connectWallet, sendTransaction, handleChange, inputFormData, errorMessage}}>
             {children}
         </TransactionContext.Provider>
     )

@@ -74,8 +74,9 @@ nav button:hover {
 ***/
 .mainContainer {
   display: flex;
+  flex-direction: column; /*縦に並べる */
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-evenly; /*余白を均等にする */
   margin-top: 178px;
 }
 
@@ -146,4 +147,18 @@ nav button:hover {
 
 .inputContainer button:hover {
   background-color: #357ABD;
+}
+
+.contentRow {  
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+}
+.error-message {
+  margin-bottom: 20px;  /* 他の要素との間にスペースを空ける */
+  color: red;  
+  font-weight: bold;  
+  text-align: center;  
+  width: 100%; 
 }

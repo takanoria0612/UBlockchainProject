@@ -1,9 +1,9 @@
 import React from 'react'
 import { useContext } from 'react';
 import { TransactionContext } from '../context/TransactionContext';
-
+import ErrorMessage from './ErrorMessage';
 const Main = () => {
-  const  { connectWallet, sendTransaction, handleChange, inputFormData } = useContext(TransactionContext);
+  const  { connectWallet, sendTransaction, handleChange, inputFormData, errorMessage } = useContext(TransactionContext);
   
   const handleSubmit = async () => {
     const { addressTo, amount } = inputFormData;
@@ -15,6 +15,9 @@ const Main = () => {
   };
   return (
     <div className="mainContainer">
+      {/* エラーメッセージの表示 */}
+      {errorMessage && <ErrorMessage message={errorMessage} />}
+      <div className="contentRow"> {/* このdivで包む */}
       {/* 左側欄 */}
       <div className="cryptContainer">
         <h1 className="title">ようこそ</h1>
@@ -42,6 +45,7 @@ const Main = () => {
             送信
         </button>
       </div>
+    </div>  
   </div>
   );
 };
